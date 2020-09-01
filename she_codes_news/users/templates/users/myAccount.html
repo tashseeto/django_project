@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>My Account</h2>
+
+
+<h3>Hi, this is your home base</h3>
+
+<div>
+    <h3>Details</h3>
+    <ul>
+
+    </ul>
+</div>
+
+<div>
+    <h3>Stories</h3>
+    <h2> <a href="{% url 'news:newStory' %}">Write New Story</a> </h2>
+</div>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">My Account</button>
+</form>
+{% endblock %}
+
+
+
+
+
