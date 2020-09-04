@@ -9,7 +9,8 @@
 
 <div id="story-wrapper">
     <h2>{{ story.title }}</h2>
-    <h4>{{ story.author }}</a></h4>
+    <h4>{{ story.author}}</h4>
+    <h4><a href="{% url 'users:authorStories' user.id %}}"> See other stories by {{ story.author.username }}</a></h4>
     <div id="story-content">
         <img src={{ story.image_source }}>
         <!-- <img src="{% static '/news/images/placeholder-5.jpg' %}"> -->
