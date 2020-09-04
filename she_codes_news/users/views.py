@@ -21,7 +21,7 @@ class ChangeAccountView(CreateView):
 class MyAccountView(DetailView):
     template_name = 'users/myAccount.html'
     model = CustomUser
-    context_object_text = 'username'
+    context_object_text = 'user'
 
 class AuthorView(generic.DetailView):
     template_name = 'users/authorStories.html'
