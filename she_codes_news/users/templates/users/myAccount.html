@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block stylesheets %}
-<link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 {% endblock %}
 
 
@@ -23,12 +23,13 @@
     <h2><a href="{% url 'news:newStory' %}">Write New Story</a></h2>
 </div>
 
-<!-- <form method="post">
+<form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Update my account</button>
 </form>
-{% endblock %} -->
+
+{% endblock %}
 
 
 
