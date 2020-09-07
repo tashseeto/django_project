@@ -11,4 +11,4 @@ class NewsStory(models.Model):
     )
     pub_date = models.DateTimeField()
     content = models.TextField()
-    image_source = models.CharField(max_length=200, default="https://picsum.photos/600")
+    image_source = models.CharField(max_length=300, default="https://picsum.photos/600")

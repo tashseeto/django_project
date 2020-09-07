@@ -1,27 +1,34 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}">
+{% endblock %}
+
 
 {% block content %}
-<h2>My Account</h2>
 
+
+<h2>My Account</h2>
 
 
 <div>
     <h3>Details</h3>
-    <ul> {{ username }}</ul>
-    <ul> {{ email }} </ul>
+    <ul> {{ request.user.username }}</ul>
+    <ul> {{ request.user.email }} </ul>
 </div>
 
 <div>
     <h3>Stories</h3>
-    <h2> <a href="{% url 'news:newStory' %}">Write New Story</a> </h2>
+    <h2><a href="{% url 'news:newStory' %}">Write New Story</a></h2>
 </div>
 
-<form method="post">
+<!-- <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">My Account</button>
+    <button type="submit">Update my account</button>
 </form>
-{% endblock %}
+{% endblock %} -->
 
 
 
