@@ -53,6 +53,11 @@ a, p {
     font-family: monospace;
 }
 
-form {
+/* form {
     background-color: aquamarine;
-}
+} */
+
+form  { display: table;      }
+p     { display: table-row;  }
+label { display: table-cell; }
+input { display: table-cell; }
